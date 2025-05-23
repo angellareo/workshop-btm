@@ -1,0 +1,50 @@
+---
+title: "Introduction"
+format: html
+---
+
+# 1. Why a BtM?
+
+-   **Problem to solve:** Existing commercial solutions were expensive and did not fully meet our specific needs. They offered limited flexibility and closed architectures, which constrained our research applications.
+
+-   **Our approach: Free/Libre and Open Source Development**\
+    We chose to develop our own solution using open hardware and open software.
+
+    Advantages include:
+
+    -   Lower cost
+
+    -   Transparency and reproducibility
+
+    -   Full adaptability to specific research needs
+
+    -   Collaborative improvement and customization
+
+# 2. What is a BtM?
+
+The BtM (Bryolichen Temperature Moisture board) is:
+
+-   A **datalogger** with:
+
+    -   A temperature/humidity sensor for ambient conditions
+
+    -   **8 activity detection channels** based on soil or plant water content
+
+### How do we measure "activity"?
+
+-   **Water content–activity correlation:** Biological activity is closely related to water content in soils and substrates.
+
+-   **Water content = Conductance:** By measuring **electrical conductance**, we estimate water content, which serves as a proxy for activity.
+
+-   BtM includes both **software and hardware** components, all completely open and free.
+
+#### Hardware Demonstration
+
+-   We will show the BtM device in both **field and laboratory** setups.\
+    *(Include photo of the open BtM case)*
+
+#### Software Demonstration
+
+-   We will explore the code used to operate and analyze data with the BtM.
+
+

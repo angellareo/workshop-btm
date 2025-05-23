@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Building a DIY BtM Datalogger for Moss & Lichen Water Monitoring"
+  sidebar:
+    style: floating  # or "docked"
+    search: true
+    contents:
+      - text: "Home"
+        file: index.qmd
+      - prerequisites.qmd
+      - intro.qmd
+      - hw.qmd
+      - sw.qmd
+
+format:
+  html:
+    theme: [sandstone]
+    css: styles.css
+    toc: true
+
+
+
+

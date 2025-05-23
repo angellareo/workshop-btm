@@ -1,0 +1,24 @@
+---
+title: "Hardware"
+format: html
+---
+## 2.1 Hardware Details
+
+### Printed Circuit Board (PCB)
+
+-   The BtM PCB can be (depending on budget and skills):
+    -   Assembled from scratch (DIY)
+    -   Provided as a partially assembled board.
+-   Key Components:
+    -   
+
+        ![PCB schematic showing its different parts](img/assembly-schematic.png)
+-   How conductance is measured:
+    -   Based on *Ohm’s Law*:
+    -   Relation between impedance (R) and conductance (C): ( G = \frac{1}{R} )
+
+### Additional Hardware (Beyond PCB)
+
+-   Arduino Board (serves as the microcontroller)
+-   Temperature/Humidity Sensor:\
+    Two versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.

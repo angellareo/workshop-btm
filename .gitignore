@@ -1,0 +1,13 @@
+# Quarto output and cache
+_site/
+.quarto/
+*.html
+*.nb.html
+
+# RStudio project files (if you're using RStudio)
+.Rproj.user/
+*.Rproj
+.Rhistory
+.RData
+.Ruserdata
+/.quarto/

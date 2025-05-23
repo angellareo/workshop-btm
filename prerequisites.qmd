@@ -1,0 +1,32 @@
+---
+title: "Requirements for the Workshop"
+format: html
+---
+
+# Requirements for the Workshop
+
+To ensure a smooth and productive experience during the workshop, please prepare the following items **in advance**:
+
+-   **Computer**: Please bring a laptop. Make sure your device has USB ports and administrative permissions to install software.
+
+-   **Arduino IDE**: We will be using the Arduino 2 IDE. Please install it in advance by following these steps:
+
+    1.  Go to the [official Arduino IDE 2 download page](https://www.arduino.cc/en/software):
+
+    2.  Download the installer for your operating system.
+
+    3.  Follow the installation instructions specific to your platform:
+
+        3.1 Linux
+
+        3.2 Windows
+
+        3.3 Mac
+
+    4.  Make sure the IDE launches correctly after installation. If you encounter any issues, consult the [installation guide provided by Arduino](https://docs.arduino.cc/software/ide-v2/tutorials/).
+
+-   The workshop will use a code repository hosted on GitHub. Please **download the repository in advance** in one of the following formats: [ZIP File](https://github.com/united-ecology/btmboard/archive/refs/heads/main.zip) or [GitHub Link](https://github.com/united-ecology/btmboard)
+
+    -   Make sure you get the contents (or extract them if you downloaded the ZIP) and browse the folder to verify that everything was downloaded correctly. **Remember the directory** you are using.
+
+If you have any questions or need technical support before the workshop, feel free to contact us at:
