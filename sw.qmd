@@ -4,6 +4,24 @@ format: html
 editor: visual
 ---
 
-## Software Demonstration
+## 2.2 Software Details
 
--   We will explore the code used to operate and analyze data with the BtM.
+### Saving data
+
+-   BtM saves data in 11 columns in a .csv file
+
+![BtM output in .csv format](img/BtM_csv_output.png)
+
+-   Date/Time
+-   Temperature (ºC)
+-   Relative Humidity (%)
+-   8 impedance columns with the value of each activity channel (ohm)
+    -   low values (\< 100) indicate the sample is moist, high values (\> 10,000) indicate the sample is wet (these values are resistance-dependent)
+
+### Arduino IDE
+
+- To program the BtM, we use an Arduino IDE 
+
+![Screenshot of BtM code](img/)
+
+- 

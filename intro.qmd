@@ -28,7 +28,7 @@ The BtM (Bryolichen Temperature Moisture board) is:
 
     -   A temperature/humidity sensor for ambient conditions
 
-    -   **8 activity detection channels** based on soil or plant water content
+    -   **8 activity detection channels** based on soil or organism water content
 
 ### How do we measure "activity"?
 
