@@ -1,6 +1,6 @@
 //****************************************************************
 // Data logging software from Leo, Lareo et al. 2018
-// v1.2 <angel.lareo@gma>
+// v1.2 <angel.lareo@uam.es>
 //****************************************************************
 
 // SELECT the appropriate sensor
@@ -36,7 +36,7 @@
 #define SHT85_ADDRESS 0x44
 
 // Launch Variables   ******************************
-const uint16_t interval = 10;  // set logging interval in SECONDS, eg: set 300 seconds for an interval of 5 mins
+const uint16_t interval = 3;  // set logging interval in SECONDS, eg: set 300 seconds for an interval of 5 mins
 char filename_prefix[] = "";
 char filename_ext[] = ".csv";
 char filename[20];    // Set filename Format: "12345678.123". Cannot be more than 8 characters in length, contain spaces or begin with a number
@@ -189,7 +189,7 @@ void loop()
   
   printDataEntry2File(&temperature,&humidity,RData);
   // lastSDLine2Serial();
-  printSerialToPlot();
+  printSerialToPlot(&temperature,&humidity,RData);
   // if (nSDLines2Serial<maxSDLines2Serial){
   //   nSDLines2Serial++;
   //   Serial.println("");
@@ -368,15 +368,15 @@ void printDataEntry2File(float* temperature, float* humidity, float* RData){
 }
 
 void printSerialToPlot(float* temperature, float* humidity, float* RData){
-  for (int a = 0; a < ANALOGMAX; a++) {
+  for (int a = 5; a < ANALOGMAX; a++) {
     Serial.print("A");
     Serial.print(a);
-    Serial.print(": ");
+    Serial.print(":");
     Serial.print(RData[a]);
-    if (a < ANALOGMAX - 1) {
-      Serial.print(" ");
-    }
+    Serial.print(",");
   }
+  Serial.print("A0:");
+  Serial.print(RData[0]);
   Serial.println();
 }
 
