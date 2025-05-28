@@ -176,23 +176,20 @@ ul.task-list li input[type="checkbox"] {
 <h1>Requirements for the Workshop</h1>
 <p>To ensure a smooth and productive experience during the workshop, please prepare the following items <strong>in advance</strong>:</p>
 <ul>
-<li><p><strong>Computer</strong>: Please bring a laptop. Make sure your device has USB ports and administrative permissions to install software.</p></li>
+<li><p><strong>Computer</strong>: Please bring a laptop (We recommend Linux, but can be done in Windows or Mac). Make sure your device has at least one USB port and <strong>administrative privileges</strong> to install software.</p></li>
 <li><p><strong>Arduino IDE</strong>: We will be using the Arduino 2 IDE. Please install it in advance by following these steps:</p>
 <ol type="1">
-<li><p>Go to the <a href="https://www.arduino.cc/en/software">official Arduino IDE 2 download page</a>:</p></li>
+<li><p>Go to the <a href="https://www.arduino.cc/en/software">official Arduino IDE 2 download page</a></p></li>
 <li><p>Download the installer for your operating system.</p></li>
-<li><p>Follow the installation instructions specific to your platform:</p>
-<p>3.1 Linux</p>
-<p>3.2 Windows</p>
-<p>3.3 Mac</p></li>
+<li><p>Follow the <a href="https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/">installation instructions specific to your platform</a></p></li>
 <li><p>Make sure the IDE launches correctly after installation. If you encounter any issues, consult the <a href="https://docs.arduino.cc/software/ide-v2/tutorials/">installation guide provided by Arduino</a>.</p></li>
 </ol></li>
-<li><p>The workshop will use a code repository hosted on GitHub. Please <strong>download the repository in advance</strong> in one of the following formats: <a href="https://github.com/united-ecology/btmboard/archive/refs/heads/main.zip">ZIP File</a> or <a href="https://github.com/united-ecology/btmboard">GitHub Link</a></p>
+<li><p><strong>Code</strong>: Please <strong>download the workshop repository in advance</strong> in using one of the following formats: <a href="https://github.com/angellareo/workshop-btm/archive/refs/heads/main.zip">ZIP File</a> or <a href="https://github.com/angellareo/workshop-btm">GitHub Link</a>. Although <a href="https://github.com/united-ecology/btmboard">the original BtM code</a> can also be used.</p>
 <ul>
-<li>Make sure you get the contents (or extract them if you downloaded the ZIP) and browse the folder to verify that everything was downloaded correctly. <strong>Remember the directory</strong> you are using.</li>
+<li>Make sure you get the contents (or extract them if you downloaded the ZIP) and browse the folder to verify that everything was downloaded correctly. <strong>Remember the path of this directory</strong>.</li>
 </ul></li>
 </ul>
-<p>If you have any questions or need technical support before the workshop, feel free to contact us at:</p>
+<p>If you have any questions or need technical support before the workshop, feel free to contact us at: angel.lareo@uam.es / maria.leomontes@gmail.com</p>
 
 
 </section>
@@ -270,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/angellareo\.github\.io\/workshop-btm\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
