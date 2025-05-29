@@ -1,0 +1,62 @@
+---
+title: "Workshop Materials"
+format: html
+editor: visual
+---
+
+## General stuff
+
+-   4 BtMs
+-   MicroSD adapters (5 in a bag)
+-   6 Petri plates
+-   Scissors
+-   Scotch tape (black)
+-   Wire stripper
+-   Solder
+-   Solder stand
+-   Screwdriver set
+-   2 big screwdrivers
+-   3 FTDI adapters (if possible, 4)
+
+## A1 Solder practice
+
+-   Tin
+-   Solder
+-   Solder sponge
+-   Soil pins to solder
+-   Cable to solder
+-   Thermoretractable case
+-   Pliers (alicates)
+
+## A2 BtM measurements
+
+-   BtM
+-   Computer with arduino IDE (Ángel)
+
+## B1 Dessication curve
+
+-   Moss
+-   Fan
+-   Destilled water
+-   FTDI adapter
+-   BtM with pins
+-   Computer with arduino IDE (Ángel)
+
+## B2 Calibration: resistor calibration
+
+-   Protoboard
+-   Resistors (2 sets pinned)
+-   Computer with arduino IDE (Ángel)
+-   FTDI adapter
+
+## B2 Calibration: Precipitation simulation
+
+-   Samples:
+    -   Moss
+    -   Lichen
+    -   Soil
+-   3 water sprays
+-   3 BtM with different probes:
+    -   Pins for mosses
+    -   Clamps for lichens
+    -   Soil pins for soils
