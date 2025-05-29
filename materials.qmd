@@ -12,16 +12,22 @@ editor: visual
 -   4 BtMs
 -   MicroSD adapters (6 in a bag)
 -   3 FTDI adapters (if possible, 4) with cable
--   3 Sensor caps
+-   3 Sensors with caps
 -   Protoboard
 -   Resistors (2 sets pinned)
--   3 BtM boards in different mount stages
+-   2 BtM boards in different mount stages
+-   2 microSD with card adapter
+-   Mini clamps
+-   Silicon cable
+-   Regular cable
+-   3 chargers
+-   Thermoretractable case
 
 # Tools
 
 -   Scissors
--   Wire stripper
--   Solder
+-   2 Wire stripper
+-   2 solders
 -   Solder stand
 -   Tin
 -   Solder sponge
@@ -31,22 +37,18 @@ editor: visual
 -   Multimeter
 -   Pliers
 -   Fan
--   3 water sprays
--   Pipette
+-   2 water sprays
+-   6 pipettes
+-   10 extra batteries
+-   2 scotch tape (black & white)
 
 # Samples
 
 -   Moss
 -   Lichen
 -   Soil (bag + 3 seed pots)
+-   3 Plastic trays
 
-# Others
-
--   Plastic tray
--   6 Petri plates
--   Scotch tape (black)
--   Cable to solder
--   Thermoretractable case
 
 # \_\_\_\_\_\_\_\_\_
 
