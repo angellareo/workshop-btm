@@ -4,8 +4,9 @@
 
 /*-- scss:rules --*/
 
+/*--
 .sidebar {
-  background-color: #2c3e50 !important; /* Dark sidebar background */
+  background-color: #2c3e50 !important;
   color: #ecf0f1;
 }
 
@@ -26,4 +27,28 @@ main.content {
   background-color: #ecf0f1;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+--*/
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%);
+  z-index: 2;
+  pointer-events: none;
 }

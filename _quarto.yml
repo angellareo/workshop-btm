@@ -1,5 +1,8 @@
 project:
   type: website
+  
+filters:
+  - quarto
 
 website:
   title: "Building a DIY BtM Datalogger for Moss & Lichen Water Monitoring"
@@ -16,8 +19,7 @@ website:
 
 format:
   html:
-    theme: [sandstone]
-    css: styles.css
+    theme: [sandstone, styles.scss]
     toc: true
 
 

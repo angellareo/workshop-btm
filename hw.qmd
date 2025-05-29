@@ -1,29 +1,64 @@
 ---
-title: "Hardware"
+title: "Hardware Details"
 format: html
 ---
+:::{.banner}
+![Photo of a BtM measuring in field](img/btm-campo.jpeg)
+:::
 
-## 2.1 Hardware Details
+<br>
 
-### Printed Circuit Board (PCB)
 
--   The BtM PCB can be (depending on budget and skills):
+## Get the Printed Circuit Board (PCB)
 
+-   The PCB can be (depending on budget and skills):
     -   Assembled from scratch (DIY)
     -   Provided as a partially assembled board.
 
--   
+## Key Components:
 
-    ## Key Components:
+![BtM PCB schematic showing its different parts](img/assembly-schematic.png)
 
-    ```         
-    ![PCB schematic showing its different parts](img/assembly-schematic.png)
-    ```
+## How conductance is measured:
 
--   How conductance is measured:
+Measures are based on **Ohm’s Law**. Ohm’s Law relates voltage (*V*), current (*I*), and resistance (*R*):
 
-    -   Based on *Ohm’s Law*:
-    -   Relation between impedance (R) and conductance (C): ( G = \frac{1}{R} )
+$$
+V = I \cdot R
+$$
+Although measures are taken as resistance values (in $\ohm$), it is commonly plotted as conductance values. There is a direct inverse relation between impedance (R) and conductance (G): 
+$$    
+G = \frac{1}{R} 
+$$
+
+
+
+### Voltage Divider
+
+```{ojs}
+//| echo: false
+import {Inputs, md} from "@observablehq/inputs"
+
+viewof Vin = Inputs.range([0, 10], {
+  label: "Input Voltage (V)",
+  value: 5,
+  step: 0.1
+})
+
+viewof R1 = Inputs.range([100, 10000], {
+  label: "Resistance R1 (Ω)",
+  value: 1000,
+  step: 100
+})
+
+viewof R2 = Inputs.range([100, 10000], {
+  label: "Resistance R2 (Ω)",
+  value: 1000,
+  step: 100
+})
+
+md`**🔋 Output Voltage (Vout):** \`${(Vin * R2 / (R1 + R2)).toFixed(2)} V\``
+```
 
 ### Additional Hardware (Beyond PCB)
 
