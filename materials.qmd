@@ -6,17 +6,49 @@ editor: visual
 
 ## General stuff
 
+# BtMs & electronics
+
+-   Computer with arduino (Ángel)
 -   4 BtMs
--   MicroSD adapters (5 in a bag)
--   6 Petri plates
+-   MicroSD adapters (6 in a bag)
+-   3 FTDI adapters (if possible, 4) with cable
+-   3 Sensor caps
+-   Protoboard
+-   Resistors (2 sets pinned)
+-   3 BtM boards in different mount stages
+
+# Tools
+
 -   Scissors
--   Scotch tape (black)
 -   Wire stripper
 -   Solder
 -   Solder stand
+-   Tin
+-   Solder sponge
 -   Screwdriver set
 -   2 big screwdrivers
--   3 FTDI adapters (if possible, 4)
+-   Blue marker
+-   Multimeter
+-   Pliers
+-   Fan
+-   3 water sprays
+-   Pipette
+
+# Samples
+
+-   Moss
+-   Lichen
+-   Soil (bag + 3 seed pots)
+
+# Others
+
+-   Plastic tray
+-   6 Petri plates
+-   Scotch tape (black)
+-   Cable to solder
+-   Thermoretractable case
+
+# \_\_\_\_\_\_\_\_\_
 
 ## A1 Solder practice
 
@@ -49,7 +81,7 @@ editor: visual
 -   Computer with arduino IDE (Ángel)
 -   FTDI adapter
 
-## B2 Calibration: Precipitation simulation
+## 32 Calibration: Precipitation simulation
 
 -   Samples:
     -   Moss
