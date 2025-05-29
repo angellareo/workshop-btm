@@ -51,7 +51,7 @@
     "href": "hw.html",
     "title": "Hardware",
     "section": "",
-    "text": "The BtM PCB can be (depending on budget and skills):\n\nAssembled from scratch (DIY)\nProvided as a partially assembled board.\n\n\n![PCB schematic showing its different parts](img/assembly-schematic.png)\nHow conductance is measured:\n\nBased on Ohm’s Law:\nRelation between impedance (R) and conductance (C): ( G = )\n\n\n\n\n\n\nArduino Board (serves as microcontroller)\nTemperature/Humidity Sensor:\nTwo versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.",
+    "text": "The BtM PCB can be (depending on budget and skills):\n\nAssembled from scratch (DIY)\nProvided as a partially assembled board.\n\n\n![PCB schematic showing its different parts](img/assembly-schematic.png)\nHow conductance is measured:\n\nBased on Ohm’s Law:\nRelation between impedance (R) and conductance (C): ( G = )\n\n\nInteractive Voltage Divider\n\nimport {Inputs, md} from \"@observablehq/inputs\"\n\nviewof Vin = Inputs.range([0, 10], {\n  label: \"Input Voltage (V)\",\n  value: 5,\n  step: 0.1\n})\n\nviewof R1 = Inputs.range([100, 10000], {\n  label: \"Resistance R1 (Ω)\",\n  value: 1000,\n  step: 100\n})\n\nviewof R2 = Inputs.range([100, 10000], {\n  label: \"Resistance R2 (Ω)\",\n  value: 1000,\n  step: 100\n})\n\nmd`**🔋 Output Voltage (Vout):**  \n\\`${(Vin * R2 / (R1 + R2)).toFixed(2)} V\\``\n\n\n\n\n\nArduino Board (serves as microcontroller)\nTemperature/Humidity Sensor:\nTwo versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.",
     "crumbs": [
       "Hardware"
     ]
@@ -61,7 +61,7 @@
     "href": "hw.html#hardware-details",
     "title": "Hardware",
     "section": "",
-    "text": "The BtM PCB can be (depending on budget and skills):\n\nAssembled from scratch (DIY)\nProvided as a partially assembled board.\n\n\n![PCB schematic showing its different parts](img/assembly-schematic.png)\nHow conductance is measured:\n\nBased on Ohm’s Law:\nRelation between impedance (R) and conductance (C): ( G = )\n\n\n\n\n\n\nArduino Board (serves as microcontroller)\nTemperature/Humidity Sensor:\nTwo versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.",
+    "text": "The BtM PCB can be (depending on budget and skills):\n\nAssembled from scratch (DIY)\nProvided as a partially assembled board.\n\n\n![PCB schematic showing its different parts](img/assembly-schematic.png)\nHow conductance is measured:\n\nBased on Ohm’s Law:\nRelation between impedance (R) and conductance (C): ( G = )\n\n\nInteractive Voltage Divider\n\nimport {Inputs, md} from \"@observablehq/inputs\"\n\nviewof Vin = Inputs.range([0, 10], {\n  label: \"Input Voltage (V)\",\n  value: 5,\n  step: 0.1\n})\n\nviewof R1 = Inputs.range([100, 10000], {\n  label: \"Resistance R1 (Ω)\",\n  value: 1000,\n  step: 100\n})\n\nviewof R2 = Inputs.range([100, 10000], {\n  label: \"Resistance R2 (Ω)\",\n  value: 1000,\n  step: 100\n})\n\nmd`**🔋 Output Voltage (Vout):**  \n\\`${(Vin * R2 / (R1 + R2)).toFixed(2)} V\\``\n\n\n\n\n\nArduino Board (serves as microcontroller)\nTemperature/Humidity Sensor:\nTwo versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.",
     "crumbs": [
       "Hardware"
     ]
