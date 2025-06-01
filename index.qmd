@@ -4,6 +4,10 @@ author: "Ángel Lareo, María Leo & Nagore G. Medina"
 date: today
 ---
 
+## Check our paper! 📜
 
+The objective of this workshop is to familiarize you with the BtM, an open-source datalogger. Back in 2019 we explained its development in a paper that includes a video tutorial, but we grow wiser, and wanted to share our new knowledge (also, we are nicer live) 🤓
 
+**Leo, M., Lareo, A., García Saura, C., Hortal, J., & Medina, N. G. (2019). BtM, a low-cost open-source datalogger to estimate the water content of nonvascular cryptogams.** [http://dx.doi.org/10.3791/58700](http://dx.doi.org/10.3791/58700)
 
+![](https://cdn.agenciasinc.es/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/un-dispositivo-para-medir-la-actividad-de-musgos-y-liquenes/6504732-1-esl-MX/Un-dispositivo-para-medir-la-actividad-de-musgos-y-liquenes.jpg)
