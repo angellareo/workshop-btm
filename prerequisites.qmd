@@ -17,7 +17,7 @@ To ensure a smooth and productive experience during the workshop, please prepare
 
     3.  Follow the [installation instructions specific to your platform](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/)
 
-    4.  Make sure the IDE launches correctly after installation. If you encounter any issues, consult the [installation guide provided by Arduino](https://docs.arduino.cc/software/ide-v2/tutorials/).
+    4.  Make sure the IDE launches correctly after installation. Check the [Getting started section](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2/).
 
     5.  Copy the libraries folder in:
 
