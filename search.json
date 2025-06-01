@@ -1,5 +1,25 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Building a DIY BtM Datalogger for Moss & Lichen Water Monitoring",
+    "section": "",
+    "text": "The objective of this workshop is to familiarize you with the BtM, an open-source datalogger. Back in 2019 we explained its development in a paper that includes a video tutorial, but we grow wiser, and wanted to share our new knowledge (also, we are nicer live) 🤓\nLeo, M., Lareo, A., García Saura, C., Hortal, J., & Medina, N. G. (2019). BtM, a low-cost open-source datalogger to estimate the water content of nonvascular cryptogams. http://dx.doi.org/10.3791/58700",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#check-our-paper",
+    "href": "index.html#check-our-paper",
+    "title": "Building a DIY BtM Datalogger for Moss & Lichen Water Monitoring",
+    "section": "",
+    "text": "The objective of this workshop is to familiarize you with the BtM, an open-source datalogger. Back in 2019 we explained its development in a paper that includes a video tutorial, but we grow wiser, and wanted to share our new knowledge (also, we are nicer live) 🤓\nLeo, M., Lareo, A., García Saura, C., Hortal, J., & Medina, N. G. (2019). BtM, a low-cost open-source datalogger to estimate the water content of nonvascular cryptogams. http://dx.doi.org/10.3791/58700",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "Introduction",
