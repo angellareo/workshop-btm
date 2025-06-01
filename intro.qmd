@@ -20,6 +20,13 @@ format: html
 
     -   Collaborative improvement and customization
 
+<!--
+Las soluciones comerciales no servían para nuestra aplicación:
+- Pines
+- 8 medidas
+- 
+-->
+
 # 2. What is a BtM?
 
 The BtM (Bryolichen Temperature Moisture board) is:

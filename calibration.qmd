@@ -1,0 +1,31 @@
+---
+title: "Calibration"
+format: html
+---
+
+## How to calibrate
+
+### Method A: Calibration with resistors
+
+![A protoboard full of resistors for calibration (Method A)](img/protoboard-calibration-A.jpg)
+
+For this first method, we are going to use a protoboard with a set of resistors (like the one in the image).
+
+![Detail of BtM connection to the resistors](img/calibration-A-detail.jpg)
+
+> ⚠️ **IMPORTANT**: Make sure you know the value of the resistors. If not, you can check the colors of the resistors and use [this calculator](https://www.calculator.net/resistor-calculator.html).
+
+### Method B: Calibration with samples
+
+![BtM calibration using Method B](img/calibration-B.jpg)
+
+
+This method simulates precipitation.
+
+> ⚠️ **IMPORTANT**: A spray that emits known quantities of water is required. Ideally, distilled (or low mineralization) water should be used.
+
+1. We start from a very dry sample.
+2. We wet the sample with the spray once.
+3. Measure (time and resistance)
+4. If the sample has not saturated, repeat from 2.
+5. If the sample saturates (constant resistance), we stop.

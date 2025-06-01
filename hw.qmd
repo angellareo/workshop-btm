@@ -1,19 +1,38 @@
 ---
-title: "Hardware Details"
+title: "Hardware details"
 format: html
 ---
-:::{.banner}
+
+::: banner
 ![Photo of a BtM measuring in field](img/btm-campo.jpeg)
 :::
 
 <br>
 
-
 ## Get the Printed Circuit Board (PCB)
 
--   The PCB can be (depending on budget and skills):
+-   The PCB can be (depending on budget and skills)\*:
     -   Assembled from scratch (DIY)
-    -   Provided as a partially assembled board.
+    -   Provided as a partially assembled board
+
+*\* You can also get a complete one from us (+ scientific/tech support)*
+
+![Different mount levels of a BtM datalogger](img/btm-mount-levels.jpg)
+
+<!-- 
+Enseñar distintos niveles de montaje:
+- PCB con nada
+- PCB con electronica soldada, pero solo eso
+- PCB + Caja + Sensores ...
+
+Comentar que, si se imprime la PCB o se pide el ensamblado, ojo con proveedores de países sin garantías de devolución.
+
+Mismo diseño en dos pedidos distintos: resultados distintos.
+Ojo con las instrucciones, incluso si son muy detalladas.
+Mejor prototipos e interacción con los proveedores.
+
+Si alguien pregunta: DAVI
+-->
 
 ## Key Components:
 
@@ -25,15 +44,13 @@ Measures are based on **Ohm’s Law**. Ohm’s Law relates voltage (*V*), curren
 
 $$
 V = I \cdot R
-$$
-Although measures are taken as resistance values (in $\ohm$), it is commonly plotted as conductance values. There is a direct inverse relation between impedance (R) and conductance (G): 
-$$    
+$$ Although measures are taken as resistance values (in $\ohm$), it is commonly plotted as conductance values. There is a direct inverse relation between impedance (R) and conductance (G): $$    
 G = \frac{1}{R} 
 $$
 
-
-
 ### Voltage Divider
+
+![](img/voltage-divider.png)
 
 ```{ojs}
 //| echo: false
@@ -62,6 +79,9 @@ md`**🔋 Output Voltage (Vout):** \`${(Vin * R2 / (R1 + R2)).toFixed(2)} V\``
 
 ### Additional Hardware (Beyond PCB)
 
--   Arduino Board (serves as microcontroller)
 -   Temperature/Humidity Sensor:\
-    Two versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.
+  -  Two versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.
+  - Sensor covers may not be good.
+- Different types of clamps/pins: Name. And say that the results are very dependent on coupling.
+- SD storage
+-   Arduino Board (serves as microcontroller)

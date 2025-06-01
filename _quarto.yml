@@ -16,6 +16,8 @@ website:
       - intro.qmd
       - hw.qmd
       - sw.qmd
+      - sample-measurements.qmd
+      - calibration.qmd
 
 format:
   html:

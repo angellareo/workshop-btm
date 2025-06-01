@@ -1,0 +1,21 @@
+---
+title: "Sample measurements"
+format: html
+---
+
+## Sample measurements
+
+Different kinds of samples:
+
+  - Bryophytes
+
+  - Lichens
+
+  - Soils
+  
+For each kind, a different probe should be used.
+
+![](img/probes.jpg)
+
+
+

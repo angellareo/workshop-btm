@@ -368,15 +368,15 @@ void printDataEntry2File(float* temperature, float* humidity, float* RData){
 }
 
 void printSerialToPlot(float* temperature, float* humidity, float* RData){
-  for (int a = 5; a < ANALOGMAX; a++) {
-    Serial.print("A");
-    Serial.print(a);
-    Serial.print(":");
-    Serial.print(RData[a]);
-    Serial.print(",");
-  }
-  Serial.print("A0:");
-  Serial.print(RData[0]);
+//  for (int a = 5; a < ANALOGMAX; a++) {
+//    Serial.print("A");
+//    Serial.print(a);
+//    Serial.print(":");
+//    Serial.print(RData[a]);
+//    Serial.print(",");
+//  }
+  Serial.print("A4:");
+  Serial.print(RData[4]);
   Serial.println();
 }
 
