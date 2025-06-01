@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
+<title>Sample measurements – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sample-measurements.html">Sample measurements</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sample-measurements.html" class="sidebar-item-text sidebar-link">
+  <a href="./sample-measurements.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Sample measurements</span></a>
   </div>
 </li>
@@ -156,11 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-a-btm" id="toc-why-a-btm" class="nav-link active" data-scroll-target="#why-a-btm">1. Why a BtM?</a></li>
-  <li><a href="#what-is-a-btm" id="toc-what-is-a-btm" class="nav-link" data-scroll-target="#what-is-a-btm">2. What is a BtM?</a>
-  <ul class="collapse">
-  <li><a href="#how-do-we-measure-activity" id="toc-how-do-we-measure-activity" class="nav-link" data-scroll-target="#how-do-we-measure-activity">How do we measure “activity”?</a></li>
-  </ul></li>
+  <li><a href="#sample-measurements" id="toc-sample-measurements" class="nav-link active" data-scroll-target="#sample-measurements">Sample measurements</a></li>
   </ul>
 </nav>
     </div>
@@ -169,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Sample measurements</h1>
 </div>
 
 
@@ -186,60 +182,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="why-a-btm" class="level1">
-<h1>1. Why a BtM?</h1>
+<section id="sample-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="sample-measurements">Sample measurements</h2>
+<p>Different kinds of samples:</p>
 <ul>
-<li><p><strong>Problem to solve:</strong> Existing commercial solutions were expensive and did not fully meet our specific needs. They offered limited flexibility and closed architectures, which constrained our research applications.</p></li>
-<li><p><strong>Our approach: Free/Libre and Open Source Development</strong><br>
-We chose to develop our own solution using open hardware and open software.</p>
-<p>Advantages include:</p>
-<ul>
-<li><p>Lower cost</p></li>
-<li><p>Transparency and reproducibility</p></li>
-<li><p>Full adaptability to specific research needs</p></li>
-<li><p>Collaborative improvement and customization</p></li>
-</ul></li>
+<li><p>Bryophytes</p></li>
+<li><p>Lichens</p></li>
+<li><p>Soils</p></li>
 </ul>
-<!--
-Las soluciones comerciales no servían para nuestra aplicación:
-- Pines
-- 8 medidas
-- 
--->
-</section>
-<section id="what-is-a-btm" class="level1">
-<h1>2. What is a BtM?</h1>
-<p>The BtM (Bryolichen Temperature Moisture board) is:</p>
-<ul>
-<li><p>A <strong>datalogger</strong> with:</p>
-<ul>
-<li><p>A temperature/humidity sensor for ambient conditions</p></li>
-<li><p><strong>8 activity detection channels</strong> based on soil or organism water content</p></li>
-</ul></li>
-</ul>
-<section id="how-do-we-measure-activity" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-measure-activity">How do we measure “activity”?</h3>
-<ul>
-<li><p><strong>Water content–activity correlation:</strong> Biological activity is closely related to water content in soils and substrates.</p></li>
-<li><p><strong>Water content = Conductance:</strong> By measuring <strong>electrical conductance</strong>, we estimate water content, which serves as a proxy for activity.</p></li>
-<li><p>BtM includes both <strong>software and hardware</strong> components, all completely open and free.</p></li>
-</ul>
-<section id="hardware-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="hardware-demonstration">Hardware Demonstration</h4>
-<ul>
-<li>We will show the BtM device in both <strong>field and laboratory</strong> setups.<br>
-<em>(Include photo of the open BtM case)</em></li>
-</ul>
-</section>
-<section id="software-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="software-demonstration">Software Demonstration</h4>
-<ul>
-<li>We will explore the code used to operate and analyze data with the BtM.</li>
-</ul>
+<p>For each kind, a different probe should be used.</p>
+<p><img src="img/probes.jpg" class="img-fluid"></p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

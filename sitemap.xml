@@ -1,27 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://angellareo.github.io/workshop-btm/about.html</loc>
-    <lastmod>2025-05-28T14:59:24.209Z</lastmod>
-  </url>
-  <url>
     <loc>https://angellareo.github.io/workshop-btm/index.html</loc>
-    <lastmod>2025-05-28T14:59:24.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://angellareo.github.io/workshop-btm/prerequisites.html</loc>
-    <lastmod>2025-05-28T15:26:40.122Z</lastmod>
+    <lastmod>2025-05-23T11:21:02.651Z</lastmod>
   </url>
   <url>
     <loc>https://angellareo.github.io/workshop-btm/intro.html</loc>
-    <lastmod>2025-05-28T14:59:24.227Z</lastmod>
+    <lastmod>2025-05-29T11:30:57.348Z</lastmod>
   </url>
   <url>
-    <loc>https://angellareo.github.io/workshop-btm/sw.html</loc>
-    <lastmod>2025-05-28T14:59:24.228Z</lastmod>
+    <loc>https://angellareo.github.io/workshop-btm/about.html</loc>
+    <lastmod>2025-05-29T11:24:03.190Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/libraries/Rtc_by_Makuna/SUPPORT.html</loc>
+    <lastmod>2025-06-01T22:09:20.168Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/libraries/SoftwareWire/Licence.html</loc>
+    <lastmod>2025-06-01T22:09:20.244Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/libraries/SHT85/CHANGELOG.html</loc>
+    <lastmod>2025-06-01T22:09:20.172Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/sample-measurements.html</loc>
+    <lastmod>2025-05-29T14:01:38.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/calibration.html</loc>
+    <lastmod>2025-05-29T13:57:30.424Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/materials.html</loc>
+    <lastmod>2025-06-01T22:09:20.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/libraries/SoftwareWire/readme.html</loc>
+    <lastmod>2025-06-01T22:09:20.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/libraries/SdFat/LICENSE.html</loc>
+    <lastmod>2025-06-01T22:09:20.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/prerequisites.html</loc>
+    <lastmod>2025-06-01T22:09:20.245Z</lastmod>
   </url>
   <url>
     <loc>https://angellareo.github.io/workshop-btm/hw.html</loc>
-    <lastmod>2025-05-29T09:45:23.337Z</lastmod>
+    <lastmod>2025-05-29T13:11:32.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://angellareo.github.io/workshop-btm/sw.html</loc>
+    <lastmod>2025-05-29T14:01:30.722Z</lastmod>
   </url>
 </urlset>

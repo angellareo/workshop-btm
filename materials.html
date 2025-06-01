@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
+<title>Workshop Materials – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -156,10 +158,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-a-btm" id="toc-why-a-btm" class="nav-link active" data-scroll-target="#why-a-btm">1. Why a BtM?</a></li>
-  <li><a href="#what-is-a-btm" id="toc-what-is-a-btm" class="nav-link" data-scroll-target="#what-is-a-btm">2. What is a BtM?</a>
+  <li><a href="#general-stuff" id="toc-general-stuff" class="nav-link active" data-scroll-target="#general-stuff">General stuff</a></li>
+  <li><a href="#btms-electronics" id="toc-btms-electronics" class="nav-link" data-scroll-target="#btms-electronics">BtMs &amp; electronics</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#samples" id="toc-samples" class="nav-link" data-scroll-target="#samples">Samples</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">_________</a>
   <ul class="collapse">
-  <li><a href="#how-do-we-measure-activity" id="toc-how-do-we-measure-activity" class="nav-link" data-scroll-target="#how-do-we-measure-activity">How do we measure “activity”?</a></li>
+  <li><a href="#a1-solder-practice" id="toc-a1-solder-practice" class="nav-link" data-scroll-target="#a1-solder-practice">A1 Solder practice</a></li>
+  <li><a href="#a2-btm-measurements" id="toc-a2-btm-measurements" class="nav-link" data-scroll-target="#a2-btm-measurements">A2 BtM measurements</a></li>
+  <li><a href="#b1-dessication-curve" id="toc-b1-dessication-curve" class="nav-link" data-scroll-target="#b1-dessication-curve">B1 Dessication curve</a></li>
+  <li><a href="#b2-calibration-resistor-calibration" id="toc-b2-calibration-resistor-calibration" class="nav-link" data-scroll-target="#b2-calibration-resistor-calibration">B2 Calibration: resistor calibration</a></li>
+  <li><a href="#calibration-precipitation-simulation" id="toc-calibration-precipitation-simulation" class="nav-link" data-scroll-target="#calibration-precipitation-simulation">32 Calibration: Precipitation simulation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -169,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Workshop Materials</h1>
 </div>
 
 
@@ -186,59 +195,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="why-a-btm" class="level1">
-<h1>1. Why a BtM?</h1>
-<ul>
-<li><p><strong>Problem to solve:</strong> Existing commercial solutions were expensive and did not fully meet our specific needs. They offered limited flexibility and closed architectures, which constrained our research applications.</p></li>
-<li><p><strong>Our approach: Free/Libre and Open Source Development</strong><br>
-We chose to develop our own solution using open hardware and open software.</p>
-<p>Advantages include:</p>
-<ul>
-<li><p>Lower cost</p></li>
-<li><p>Transparency and reproducibility</p></li>
-<li><p>Full adaptability to specific research needs</p></li>
-<li><p>Collaborative improvement and customization</p></li>
-</ul></li>
-</ul>
-<!--
-Las soluciones comerciales no servían para nuestra aplicación:
-- Pines
-- 8 medidas
-- 
--->
+<section id="general-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="general-stuff">General stuff</h2>
 </section>
-<section id="what-is-a-btm" class="level1">
-<h1>2. What is a BtM?</h1>
-<p>The BtM (Bryolichen Temperature Moisture board) is:</p>
+<section id="btms-electronics" class="level1">
+<h1>BtMs &amp; electronics</h1>
 <ul>
-<li><p>A <strong>datalogger</strong> with:</p>
-<ul>
-<li><p>A temperature/humidity sensor for ambient conditions</p></li>
-<li><p><strong>8 activity detection channels</strong> based on soil or organism water content</p></li>
-</ul></li>
-</ul>
-<section id="how-do-we-measure-activity" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-measure-activity">How do we measure “activity”?</h3>
-<ul>
-<li><p><strong>Water content–activity correlation:</strong> Biological activity is closely related to water content in soils and substrates.</p></li>
-<li><p><strong>Water content = Conductance:</strong> By measuring <strong>electrical conductance</strong>, we estimate water content, which serves as a proxy for activity.</p></li>
-<li><p>BtM includes both <strong>software and hardware</strong> components, all completely open and free.</p></li>
-</ul>
-<section id="hardware-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="hardware-demonstration">Hardware Demonstration</h4>
-<ul>
-<li>We will show the BtM device in both <strong>field and laboratory</strong> setups.<br>
-<em>(Include photo of the open BtM case)</em></li>
+<li>Computer with arduino (Ángel)</li>
+<li>4 BtMs</li>
+<li>MicroSD adapters (6 in a bag)</li>
+<li>3 FTDI adapters (if possible, 4) with cable</li>
+<li>3 Sensors with caps</li>
+<li>Protoboard</li>
+<li>Resistors (2 sets pinned)</li>
+<li>2 BtM boards in different mount stages</li>
+<li>2 microSD with card adapter</li>
+<li>Mini clamps</li>
+<li>Silicon cable</li>
+<li>Regular cable</li>
+<li>3 chargers</li>
+<li>Thermoretractable case</li>
 </ul>
 </section>
-<section id="software-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="software-demonstration">Software Demonstration</h4>
+<section id="tools" class="level1">
+<h1>Tools</h1>
 <ul>
-<li>We will explore the code used to operate and analyze data with the BtM.</li>
+<li>Scissors</li>
+<li>2 Wire stripper</li>
+<li>2 solders</li>
+<li>Solder stand</li>
+<li>Tin</li>
+<li>Solder sponge</li>
+<li>Screwdriver set</li>
+<li>2 big screwdrivers</li>
+<li>Blue marker</li>
+<li>Multimeter</li>
+<li>Pliers</li>
+<li>Fan</li>
+<li>2 water sprays</li>
+<li>6 pipettes</li>
+<li>10 extra batteries</li>
+<li>2 scotch tape (black &amp; white)</li>
+</ul>
+</section>
+<section id="samples" class="level1">
+<h1>Samples</h1>
+<ul>
+<li>Moss</li>
+<li>Lichen</li>
+<li>Soil (bag + 3 seed pots)</li>
+<li>3 Plastic trays</li>
+</ul>
+</section>
+<section id="section" class="level1">
+<h1>_________</h1>
+<section id="a1-solder-practice" class="level2">
+<h2 class="anchored" data-anchor-id="a1-solder-practice">A1 Solder practice</h2>
+<ul>
+<li>Tin</li>
+<li>Solder</li>
+<li>Solder sponge</li>
+<li>Soil pins to solder</li>
+<li>Cable to solder</li>
+<li>Thermoretractable case</li>
+<li>Pliers (alicates)</li>
+</ul>
+</section>
+<section id="a2-btm-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="a2-btm-measurements">A2 BtM measurements</h2>
+<ul>
+<li>BtM</li>
+<li>Computer with arduino IDE (Ángel)</li>
+</ul>
+</section>
+<section id="b1-dessication-curve" class="level2">
+<h2 class="anchored" data-anchor-id="b1-dessication-curve">B1 Dessication curve</h2>
+<ul>
+<li>Moss</li>
+<li>Fan</li>
+<li>Destilled water</li>
+<li>FTDI adapter</li>
+<li>BtM with pins</li>
+<li>Computer with arduino IDE (Ángel)</li>
+</ul>
+</section>
+<section id="b2-calibration-resistor-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="b2-calibration-resistor-calibration">B2 Calibration: resistor calibration</h2>
+<ul>
+<li>Protoboard</li>
+<li>Resistors (2 sets pinned)</li>
+<li>Computer with arduino IDE (Ángel)</li>
+<li>FTDI adapter</li>
+</ul>
+</section>
+<section id="calibration-precipitation-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="calibration-precipitation-simulation">32 Calibration: Precipitation simulation</h2>
+<ul>
+<li>Samples:
+<ul>
+<li>Moss</li>
+<li>Lichen</li>
+<li>Soil</li>
+</ul></li>
+<li>3 water sprays</li>
+<li>3 BtM with different probes:
+<ul>
+<li>Pins for mosses</li>
+<li>Clamps for lichens</li>
+<li>Soil pins for soils</li>
+</ul></li>
 </ul>
 
 
-</section>
 </section>
 </section>
 

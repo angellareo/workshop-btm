@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
+<title>Calibration – Building a DIY BtM Datalogger for Moss &amp; Lichen Water Monitoring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./calibration.html">Calibration</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./calibration.html" class="sidebar-item-text sidebar-link">
+  <a href="./calibration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Calibration</span></a>
   </div>
 </li>
@@ -156,10 +156,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-a-btm" id="toc-why-a-btm" class="nav-link active" data-scroll-target="#why-a-btm">1. Why a BtM?</a></li>
-  <li><a href="#what-is-a-btm" id="toc-what-is-a-btm" class="nav-link" data-scroll-target="#what-is-a-btm">2. What is a BtM?</a>
+  <li><a href="#how-to-calibrate" id="toc-how-to-calibrate" class="nav-link active" data-scroll-target="#how-to-calibrate">How to calibrate</a>
   <ul class="collapse">
-  <li><a href="#how-do-we-measure-activity" id="toc-how-do-we-measure-activity" class="nav-link" data-scroll-target="#how-do-we-measure-activity">How do we measure “activity”?</a></li>
+  <li><a href="#method-a-calibration-with-resistors" id="toc-method-a-calibration-with-resistors" class="nav-link" data-scroll-target="#method-a-calibration-with-resistors">Method A: Calibration with resistors</a></li>
+  <li><a href="#method-b-calibration-with-samples" id="toc-method-b-calibration-with-samples" class="nav-link" data-scroll-target="#method-b-calibration-with-samples">Method B: Calibration with samples</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Calibration</h1>
 </div>
 
 
@@ -186,59 +186,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="why-a-btm" class="level1">
-<h1>1. Why a BtM?</h1>
-<ul>
-<li><p><strong>Problem to solve:</strong> Existing commercial solutions were expensive and did not fully meet our specific needs. They offered limited flexibility and closed architectures, which constrained our research applications.</p></li>
-<li><p><strong>Our approach: Free/Libre and Open Source Development</strong><br>
-We chose to develop our own solution using open hardware and open software.</p>
-<p>Advantages include:</p>
-<ul>
-<li><p>Lower cost</p></li>
-<li><p>Transparency and reproducibility</p></li>
-<li><p>Full adaptability to specific research needs</p></li>
-<li><p>Collaborative improvement and customization</p></li>
-</ul></li>
-</ul>
-<!--
-Las soluciones comerciales no servían para nuestra aplicación:
-- Pines
-- 8 medidas
-- 
--->
+<section id="how-to-calibrate" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-calibrate">How to calibrate</h2>
+<section id="method-a-calibration-with-resistors" class="level3">
+<h3 class="anchored" data-anchor-id="method-a-calibration-with-resistors">Method A: Calibration with resistors</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/protoboard-calibration-A.jpg" class="img-fluid figure-img"></p>
+<figcaption>A protoboard full of resistors for calibration (Method A)</figcaption>
+</figure>
+</div>
+<p>For this first method, we are going to use a protoboard with a set of resistors (like the one in the image).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/calibration-A-detail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Detail of BtM connection to the resistors</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>⚠️ <strong>IMPORTANT</strong>: Make sure you know the value of the resistors. If not, you can check the colors of the resistors and use <a href="https://www.calculator.net/resistor-calculator.html">this calculator</a>.</p>
+</blockquote>
 </section>
-<section id="what-is-a-btm" class="level1">
-<h1>2. What is a BtM?</h1>
-<p>The BtM (Bryolichen Temperature Moisture board) is:</p>
-<ul>
-<li><p>A <strong>datalogger</strong> with:</p>
-<ul>
-<li><p>A temperature/humidity sensor for ambient conditions</p></li>
-<li><p><strong>8 activity detection channels</strong> based on soil or organism water content</p></li>
-</ul></li>
-</ul>
-<section id="how-do-we-measure-activity" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-measure-activity">How do we measure “activity”?</h3>
-<ul>
-<li><p><strong>Water content–activity correlation:</strong> Biological activity is closely related to water content in soils and substrates.</p></li>
-<li><p><strong>Water content = Conductance:</strong> By measuring <strong>electrical conductance</strong>, we estimate water content, which serves as a proxy for activity.</p></li>
-<li><p>BtM includes both <strong>software and hardware</strong> components, all completely open and free.</p></li>
-</ul>
-<section id="hardware-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="hardware-demonstration">Hardware Demonstration</h4>
-<ul>
-<li>We will show the BtM device in both <strong>field and laboratory</strong> setups.<br>
-<em>(Include photo of the open BtM case)</em></li>
-</ul>
-</section>
-<section id="software-demonstration" class="level4">
-<h4 class="anchored" data-anchor-id="software-demonstration">Software Demonstration</h4>
-<ul>
-<li>We will explore the code used to operate and analyze data with the BtM.</li>
-</ul>
+<section id="method-b-calibration-with-samples" class="level3">
+<h3 class="anchored" data-anchor-id="method-b-calibration-with-samples">Method B: Calibration with samples</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/calibration-B.jpg" class="img-fluid figure-img"></p>
+<figcaption>BtM calibration using Method B</figcaption>
+</figure>
+</div>
+<p>This method simulates precipitation.</p>
+<blockquote class="blockquote">
+<p>⚠️ <strong>IMPORTANT</strong>: A spray that emits known quantities of water is required. Ideally, distilled (or low mineralization) water should be used.</p>
+</blockquote>
+<ol type="1">
+<li>We start from a very dry sample.</li>
+<li>We wet the sample with the spray once.</li>
+<li>Measure (time and resistance)</li>
+<li>If the sample has not saturated, repeat from 2.</li>
+<li>If the sample saturates (constant resistance), we stop.</li>
+</ol>
 
 
-</section>
 </section>
 </section>
 
