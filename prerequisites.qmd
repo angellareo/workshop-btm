@@ -19,8 +19,14 @@ To ensure a smooth and productive experience during the workshop, please prepare
 
     4.  Make sure the IDE launches correctly after installation. If you encounter any issues, consult the [installation guide provided by Arduino](https://docs.arduino.cc/software/ide-v2/tutorials/).
 
+    5.  Copy the libraries folder in:
+
+        1.   `Documents/Arduino/` (Windows)
+
+        2.  `~/Arduino/` (Linux & Mac)
+
 -   **Code**: Please **download the workshop repository in advance** in using one of the following formats: [ZIP File](https://github.com/angellareo/workshop-btm/archive/refs/heads/main.zip) or [GitHub Link](https://github.com/angellareo/workshop-btm). Although [the original BtM code](https://github.com/united-ecology/btmboard) can also be used.
 
     -   Make sure you get the contents (or extract them if you downloaded the ZIP) and browse the folder to verify that everything was downloaded correctly. **Remember the path of this directory**.
 
-If you have any questions or need technical support before the workshop, feel free to contact us at: angel.lareo@uam.es / maria.leomontes@gmail.com 
+If you have any questions or need technical support before the workshop, feel free to contact us at: angel.lareo\@uam.es / maria.leomontes\@gmail.com
