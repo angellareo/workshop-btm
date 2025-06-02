@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ad0db9c75fdfb6108cda9f648e77c774.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-22480a7cc03f3158079f7f1e8078fa3e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -254,12 +254,7 @@ window.Quarto = {
 
 
 <div class="banner">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/btm-campo.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Photo of a BtM measuring in field</figcaption>
-</figure>
-</div>
+<p><img src="img/btm-campo.jpeg" class="img-fluid"></p>
 </div>
 <p><br></p>
 <section id="get-the-printed-circuit-board-pcb" class="level2">
@@ -312,29 +307,28 @@ G = \frac{1}{R}
 \]</span></p>
 <section id="voltage-divider" class="level3">
 <h3 class="anchored" data-anchor-id="voltage-divider">Voltage Divider</h3>
+<p>A <strong>voltage divider</strong> is a simple circuit used to produce a voltage that is a fraction of the input voltage. It typically consists of two resistors in series: <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span>, connected across a voltage source <span class="math inline">\(V_{\text{in}}\)</span>. The output voltage <span class="math inline">\(V_{\text{out}}\)</span> is taken from the junction of <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span>, relative to ground.</p>
+<section id="to-measure-r_1-using-a-voltage-divider" class="level4">
+<h4 class="anchored" data-anchor-id="to-measure-r_1-using-a-voltage-divider">To measure <span class="math inline">\(R_1\)</span> using a voltage divider:</h4>
+<p><span class="math display">\[
+V_{\text{out}} = V_{\text{in}} \cdot \frac{R_2}{R_1 + R_2}
+\]</span></p>
+<p>Solving for <span class="math inline">\(R_1\)</span>, you get:</p>
+<p><span class="math display">\[
+R_1 = R_2 \left( \frac{V_{\text{in}}}{V_{\text{out}}} - 1 \right)
+\]</span></p>
+<p>This formula allows you to compute <span class="math inline">\(R_1\)</span> using known values of <span class="math inline">\(V_{\text{in}}\)</span>, <span class="math inline">\(V_{\text{out}}\)</span>, and <span class="math inline">\(R_2\)</span>.</p>
 <p><img src="img/voltage-divider.png" class="img-fluid"></p>
+<p>Assume:</p>
+<ul>
+<li>You know the value of <span class="math inline">\(R_2\)</span> (in our case 330K),</li>
+<li>You apply a known input voltage <span class="math inline">\(V_{\text{in}}\)</span> (in our case: 3.3V)</li>
+<li>You measure the output voltage <span class="math inline">\(V_{\text{out}}\)</span> at the node between <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span>.</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="57" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Inputs<span class="op">,</span> md} <span class="im">from</span> <span class="st">"@observablehq/inputs"</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>viewof Vin <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">,</span> {</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Input Voltage (V)"</span><span class="op">,</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>viewof R1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">100</span><span class="op">,</span> <span class="dv">10000</span>]<span class="op">,</span> {</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Resistance R1 (Ω)"</span><span class="op">,</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="dv">100</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>viewof R2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">100</span><span class="op">,</span> <span class="dv">10000</span>]<span class="op">,</span> {</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Resistance R2 (Ω)"</span><span class="op">,</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="dv">100</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`**🔋 Output Voltage (Vout):** </span><span class="sc">\`${</span>(Vin <span class="op">*</span> R2 <span class="op">/</span> (R1 <span class="op">+</span> R2))<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs"> V</span><span class="sc">\`</span><span class="vs">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="79" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 78;"><span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Inputs<span class="op">,</span> md} <span class="im">from</span> <span class="st">"@observablehq/inputs"</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`Input Voltage (Vin): 3.3V`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -344,18 +338,41 @@ G = \frac{1}{R}
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-1-2" data-nodetype="declaration">
+<div id="ojs-cell-1-2" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="83" data-source-offset="-80"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 82;"><span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`Known resistance (R2): 330KΩ`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-1-3" data-nodetype="declaration">
+<div id="ojs-cell-1-3" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="86" data-source-offset="-127"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 85;"><span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Vin <span class="op">=</span> <span class="fl">3.3</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>R2 <span class="op">=</span> <span class="dv">330</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="co">// Slider for R1 (you move this)</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>viewof R1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">10</span><span class="op">,</span> <span class="dv">1000</span>]<span class="op">,</span> {</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Resistance R1 (Ω)"</span><span class="op">,</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="co">// Voltage output calculated from R1</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>Vout <span class="op">=</span> <span class="op">+</span>(Vin <span class="op">*</span> R2<span class="op">*</span><span class="dv">1000</span> <span class="op">/</span> (R1<span class="op">*</span><span class="dv">1000</span> <span class="op">+</span> R2<span class="op">*</span><span class="dv">1000</span>))<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="co">// Slider for setting desired Vout — recalculates R1</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>viewof Vout_input <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.8</span><span class="op">,</span> Vin]<span class="op">,</span> {</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Output Voltage (Vout):"</span><span class="op">,</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> Vout<span class="op">,</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="co">// Computed R1 from desired Vout</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>R1_computed <span class="op">=</span> R2 <span class="op">*</span> (Vin <span class="op">/</span> Vout_input <span class="op">-</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-4" data-nodetype="declaration">
@@ -365,23 +382,53 @@ G = \frac{1}{R}
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-1-5" data-nodetype="expression">
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-8" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-9" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="additional-hardware-beyond-pcb" class="level3">
 <h3 class="anchored" data-anchor-id="additional-hardware-beyond-pcb">Additional Hardware (Beyond PCB)</h3>
 <ul>
-<li>Temperature/Humidity Sensor:<br>
-</li>
-<li>Two versions available; we will discuss the pros and cons of each, including a current issue with one of the sensor models.</li>
-<li>Sensor covers may not be good.</li>
-<li>Different types of clamps/pins: Name. And say that the results are very dependent on coupling.</li>
-<li>SD storage</li>
-<li>Arduino Board (serves as microcontroller)</li>
+<li><p>Temperature/Humidity Sensor:</p>
+<ul>
+<li><p>Two versions compatible with code.</p></li>
+<li><p>Sensor covers may not be good.</p></li>
+</ul></li>
+<li><p>Different types of clamps/pins. The results are very dependent on coupling.</p></li>
+<li><p>SD storage</p></li>
+<li><p>Arduino Board (serves as microcontroller)</p></li>
 </ul>
 
 
@@ -390,7 +437,7 @@ G = \frac{1}{R}
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7SW5wdXRzLCBtZH0gZnJvbSBcIkBvYnNlcnZhYmxlaHEvaW5wdXRzXCJcblxudmlld29mIFZpbiA9IElucHV0cy5yYW5nZShbMCwgMTBdLCB7XG4gIGxhYmVsOiBcIklucHV0IFZvbHRhZ2UgKFYpXCIsXG4gIHZhbHVlOiA1LFxuICBzdGVwOiAwLjFcbn0pXG5cbnZpZXdvZiBSMSA9IElucHV0cy5yYW5nZShbMTAwLCAxMDAwMF0sIHtcbiAgbGFiZWw6IFwiUmVzaXN0YW5jZSBSMSAozqkpXCIsXG4gIHZhbHVlOiAxMDAwLFxuICBzdGVwOiAxMDBcbn0pXG5cbnZpZXdvZiBSMiA9IElucHV0cy5yYW5nZShbMTAwLCAxMDAwMF0sIHtcbiAgbGFiZWw6IFwiUmVzaXN0YW5jZSBSMiAozqkpXCIsXG4gIHZhbHVlOiAxMDAwLFxuICBzdGVwOiAxMDBcbn0pXG5cbm1kYCoq8J+UiyBPdXRwdXQgVm9sdGFnZSAoVm91dCk6KiogXFxgJHsoVmluICogUjIgLyAoUjEgKyBSMikpLnRvRml4ZWQoMil9IFZcXGBgXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ1ZpbicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdSMScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdSMicpIn1dfQ==
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7SW5wdXRzLCBtZH0gZnJvbSBcIkBvYnNlcnZhYmxlaHEvaW5wdXRzXCJcblxubWRgSW5wdXQgVm9sdGFnZSAoVmluKTogMy4zVmBcblxubWRgS25vd24gcmVzaXN0YW5jZSAoUjIpOiAzMzBLzqlgXG5cbi8vIENvbnN0YW50c1xuVmluID0gMy4zXG5SMiA9IDMzMFxuXG4vLyBTbGlkZXIgZm9yIFIxICh5b3UgbW92ZSB0aGlzKVxudmlld29mIFIxID0gSW5wdXRzLnJhbmdlKFsxMCwgMTAwMF0sIHtcbiAgbGFiZWw6IFwiUmVzaXN0YW5jZSBSMSAozqkpXCIsXG4gIHZhbHVlOiA1MDAsXG4gIHN0ZXA6IDEwXG59KVxuXG4vLyBWb2x0YWdlIG91dHB1dCBjYWxjdWxhdGVkIGZyb20gUjFcblZvdXQgPSArKFZpbiAqIFIyKjEwMDAgLyAoUjEqMTAwMCArIFIyKjEwMDApKS50b0ZpeGVkKDIpXG5cbi8vIFNsaWRlciBmb3Igc2V0dGluZyBkZXNpcmVkIFZvdXQg4oCUIHJlY2FsY3VsYXRlcyBSMVxudmlld29mIFZvdXRfaW5wdXQgPSBJbnB1dHMucmFuZ2UoWzAuOCwgVmluXSwge1xuICBsYWJlbDogXCJPdXRwdXQgVm9sdGFnZSAoVm91dCk6XCIsXG4gIHZhbHVlOiBWb3V0LFxuICBzdGVwOiAwLjAxXG59KVxuXG4vLyBDb21wdXRlZCBSMSBmcm9tIGRlc2lyZWQgVm91dFxuUjFfY29tcHV0ZWQgPSBSMiAqIChWaW4gLyBWb3V0X2lucHV0IC0gMSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnUjEnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnVm91dF9pbnB1dCcpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
