@@ -43,15 +43,16 @@ The BtM (Bryolichen Temperature Moisture board) is:
 
 -   **Water content = Conductance:** By measuring **electrical conductance**, we estimate water content, which serves as a proxy for activity.
 
--   BtM includes both **software and hardware** components, all completely open and free.
+-   BtM includes both **software and hardware** components, both of them open-source.
 
-#### Hardware Demonstration
+### How is this workshop organized?
 
--   We will show the BtM device in both **field and laboratory** setups.\
-    *(Include photo of the open BtM case)*
+#### Part A: BtM Tech Details
 
-#### Software Demonstration
+-   We will show you how to operate the BtM and some tech details for both **field and laboratory** setups.
 
--   We will explore the code used to operate and analyze data with the BtM.
+#### Part B: Data Retrievement and Data Analysis Demonstration
+
+-   We will explore the code used to **retrieve and analyze data** using the BtM.
 
 
